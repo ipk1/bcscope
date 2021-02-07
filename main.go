@@ -91,7 +91,7 @@ func PrintProgramScope(url string, sessionToken string, programURL bool) {
 		log.Fatal(err)
 	}
 
-	doc.Find("#user-guides__bounty-brief__targets-table").Each(func(index int, tablehtml *goquery.Selection) {
+	doc.Find("#cc-rewards-link-table__endpoint").Each(func(index int, tablehtml *goquery.Selection) {
 		tablehtml.Find("tr").Each(func(indextr int, rowhtml *goquery.Selection) {
 			rowhtml.Find("tbody td").Each(func(indexth int, tablecell *goquery.Selection) {
 				if indexth == 0 {
